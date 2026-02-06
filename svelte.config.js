@@ -1,0 +1,45 @@
+import adapter from '@sveltejs/adapter-static'
+import { mdsvex } from 'mdsvex'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypeExternalLinks from 'rehype-external-links'
+import rehypeSlug from 'rehype-slug'
+import preprocess from 'svelte-preprocess'
+
+const extensions = ['.svelte', '.md']
+
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+  preprocess: [
+    preprocess({
+      preserve: ['module']
+    }),
+    mdsvex({
+      layout: {},
+      extensions: extensions,
+      rehypePlugins: [
+        rehypeExternalLinks, // Adds 'target' and 'rel' to external links
+        rehypeSlug, // Adds 'id' attributes to Headings (h1,h2,etc)
+        [
+          rehypeAutolinkHeadings,
+          {
+            // Adds hyperlinks to the headings, requires rehypeSlug
+            behavior: 'append',
+            content: {
+              type: 'element',
+              tagName: 'span',
+              properties: { className: ['heading-link'] },
+              children: [{ type: 'text', value: '#' }]
+            }
+          }
+        ]
+      ]
+    })
+  ],
+  extensions: extensions,
+
+  kit: {
+    adapter: adapter()
+  }
+}
+
+export default config

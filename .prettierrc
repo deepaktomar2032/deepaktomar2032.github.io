@@ -1,0 +1,14 @@
+{
+  "importOrderParserPlugins": ["typescript", "decorators-legacy", "classProperties"],
+  "importOrder": [".*polyfills.*$", "<THIRD_PARTY_MODULES>", "^@types/(.*)$", "^src/(.*)$", "^[./]"],
+  "plugins": ["prettier-plugin-svelte", "@trivago/prettier-plugin-sort-imports"],
+  "endOfLine": "lf",
+  "printWidth": 120,
+  "semi": false,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "none",
+  "useTabs": false,
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}
