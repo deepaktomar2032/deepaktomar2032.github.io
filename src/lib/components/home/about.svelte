@@ -15,7 +15,7 @@
 </section>
 
 <style lang="scss">
-  @import '../../scss/breakpoints.scss';
+  @use '../../scss/breakpoints.scss' as *;
 
   #about {
     position: relative;
