@@ -1,5 +1,6 @@
 <script>
   import { profile } from '$lib/profile'
+  import ExperienceIcon from '$lib/svg/experience.svelte'
 </script>
 
 <section id="main">
@@ -7,7 +8,12 @@
   <p class="intro">
     <span class="center">I build things that don't break (usually) & sometimes write about it.</span>
   </p>
-  <div class="ctas" />
+  <div class="ctas">
+    <a id="experience-btn" href="#experience" class="button secondary-light">
+      <ExperienceIcon />
+      Experience
+    </a>
+  </div>
 </section>
 
 <style lang="scss">
