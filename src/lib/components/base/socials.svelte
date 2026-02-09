@@ -7,16 +7,21 @@
 </script>
 
 <div class="socials">
-  <a href={profile.urls.linkedin} target="_blank" rel="noopener" title="Let's connect professionally on LinkedIn">
+  <a
+    href={`https://${profile.urls.linkedin}`}
+    target="_blank"
+    rel="noopener"
+    title="Let's connect professionally on LinkedIn"
+  >
     <LinkedInIcon />
   </a>
-  <a href={profile.urls.github} target="_blank" rel="noopener" title="Browse my code adventures on GitHub">
+  <a href={`https://${profile.urls.github}`} target="_blank" rel="noopener" title="Browse my code adventures on GitHub">
     <GitHubIcon />
   </a>
   <a href={`mailto:${profile.email}`} target="_blank" rel="noopener" title="Drop me an email - I actually reply">
     <EmailIcon />
   </a>
-  <a href={profile.urls.x} target="_blank" rel="noopener" title="Say hello on X (formerly Twitter)">
+  <a href={`https://${profile.urls.x}`} target="_blank" rel="noopener" title="Say hello on X (formerly Twitter)">
     <XIcon />
   </a>
 </div>
