@@ -12,6 +12,8 @@
     align="right"
     title="Professional Experience"
     description="Over the past {yearsOfExperience}+ years, my work has spanned security, casino gambling, social gaming, healthcare, and aviation - from early ideas to production systems."
+    buttonText="View CV"
+    buttonUrl="/cv"
     buttonColor="secondary"
   >
     <TwoByTwoGrid>
@@ -23,7 +25,7 @@
             </div>
             <p>{entry.jobTitle}</p>
             <div class="note location">{entry.location}</div>
-            <div class="note">{entry.timeframe}</div>
+            <div class="note">{entry.start} - {entry.end}</div>
             <div class="text justify">
               {entry.description}
             </div>
