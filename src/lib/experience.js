@@ -9,6 +9,8 @@ export const yearsOfExperience = Math.abs(new Date(Date.now() - careerStart.getT
 export const profile = `Senior Full-Stack Engineer (Backend-Focused) with ${yearsOfExperience}+ years of experience building scalable systems used at enterprise and consumer scale.
 Strong in system design, APIs, real-time features, and developer infrastructure. Experienced across aviation, gaming, and enterprise software, with a focus on reliability, performance, and long-term maintainability.`
 
+export const description = `Over the past ${yearsOfExperience}+ years, my work has spanned security, casino gambling, social gaming, healthcare, and aviation - from early ideas to production systems.`
+
 export const skills = {
   frontend: ['JavaScript', 'TypeScript', 'HTML', 'JSON'],
   backend: ['Node.js', 'TypeScript', 'Express', 'Koa.js', 'NestJS', 'Java', 'API Development'],
