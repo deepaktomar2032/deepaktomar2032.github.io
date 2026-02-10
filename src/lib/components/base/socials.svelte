@@ -3,7 +3,7 @@
   import GitHubIcon from '$lib/svg/socials/github.svelte'
   import LinkedInIcon from '$lib/svg/socials/linkedin.svelte'
   import EmailIcon from '$lib/svg/socials/email.svelte'
-  import { profile } from '$lib/profile'
+  import { profile } from '$lib/data/profile'
 </script>
 
 <div class="socials">

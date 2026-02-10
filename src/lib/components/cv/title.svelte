@@ -1,5 +1,5 @@
 <script>
-  import { profile } from '$lib/profile'
+  import { profile } from '$lib/data/profile'
 </script>
 
 <div class="cv-title">

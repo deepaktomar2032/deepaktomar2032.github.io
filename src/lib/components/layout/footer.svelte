@@ -1,6 +1,6 @@
 <script>
   import Socials from '$lib/components/base/socials.svelte'
-  import { profile } from '$lib/profile'
+  import { profile } from '$lib/data/profile'
 
   let currentYear = new Date().getFullYear()
 </script>

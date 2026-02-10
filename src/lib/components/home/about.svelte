@@ -1,5 +1,5 @@
 <script>
-  import { headlineText, descriptionText } from '$lib/profile'
+  import { headlineText, descriptionText } from '$lib/data/profile'
   import Avatar from '$lib/svg/avatar.svelte'
 </script>
 

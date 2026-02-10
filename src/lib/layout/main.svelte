@@ -2,7 +2,7 @@
   import Header from '$lib/components/layout/header.svelte'
   import Footer from '$lib/components/layout/footer.svelte'
 
-  import { description, keywords, title } from '$lib/meta'
+  import { description, keywords, title } from '$lib/data/meta'
 </script>
 
 <svelte:head>
