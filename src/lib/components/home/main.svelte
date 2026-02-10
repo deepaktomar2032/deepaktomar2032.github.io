@@ -1,5 +1,5 @@
 <script>
-  import { tagline, greetingHeading } from '$lib/profile'
+  import { tagline, greetingHeading } from '$lib/data/profile'
   import ExperienceIcon from '$lib/svg/experience.svelte'
 </script>
 

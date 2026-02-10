@@ -6,8 +6,8 @@
   import ChatIcon from '$lib/svg/chat.svelte'
   import InternetIcon from '$lib/svg/internet.svelte'
   import ExperienceIcon from '$lib/svg/experience.svelte'
-  import { yearsOfExperience } from '$lib/experience'
-  import { profile } from '$lib/profile'
+  import { yearsOfExperience } from '$lib/data/experience'
+  import { profile } from '$lib/data/profile'
 </script>
 
 <ul class="cv-contact">

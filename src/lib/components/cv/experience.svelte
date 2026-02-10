@@ -2,7 +2,7 @@
   import PinIcon from '$lib/svg/pin.svelte'
   import CircleIcon from '$lib/svg/circle.svelte'
   import LowAccentHighlight from '$lib/components/style/low-accent-highlight.svelte'
-  import { entries } from '$lib/experience'
+  import { entries } from '$lib/data/experience'
 </script>
 
 <div class="cv-experience">

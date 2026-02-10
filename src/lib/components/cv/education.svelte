@@ -2,7 +2,7 @@
   import PinIcon from '$lib/svg/pin.svelte'
   import CircleIcon from '$lib/svg/circle.svelte'
   import LowAccentHighlight from '$lib/components/style/low-accent-highlight.svelte'
-  import { education } from '$lib/education'
+  import { education } from '$lib/data/education'
 </script>
 
 <div class="education">

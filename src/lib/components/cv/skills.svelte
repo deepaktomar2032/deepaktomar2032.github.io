@@ -1,5 +1,5 @@
 <script>
-  import { skills } from '$lib/experience'
+  import { skills } from '$lib/data/experience'
 
   const skillSections = [
     { label: 'Front-end', key: 'frontend' },

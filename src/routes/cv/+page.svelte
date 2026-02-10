@@ -1,6 +1,6 @@
 <script>
   import Mainlayout from '$lib/layout/main.svelte'
-  import { title } from '$lib/meta'
+  import { title } from '$lib/data/meta'
   import CV from '$lib/components/cv/cv.svelte'
   import DownloadIcon from '$lib/svg/download.svelte'
 </script>

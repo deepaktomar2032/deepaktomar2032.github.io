@@ -4,7 +4,7 @@
   import Section from '$lib/components/layout/section.svelte'
   import LowAccentHighlight from '$lib/components/style/low-accent-highlight.svelte'
   import Tag from '../base/tag.svelte'
-  import { description, entries } from '$lib/experience'
+  import { description, entries } from '$lib/data/experience'
 </script>
 
 <section id="experience">

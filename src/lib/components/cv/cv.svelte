@@ -6,7 +6,7 @@
   import Experience from './experience.svelte'
   import Education from './education.svelte'
   import Skills from './skills.svelte'
-  import { profile } from '$lib/experience'
+  import { profile } from '$lib/data/experience'
 </script>
 
 <article class="cv">

@@ -1,6 +1,6 @@
 <script>
   import '../app.scss'
-  import { keywords } from '$lib/meta'
+  import { keywords } from '$lib/data/meta'
 </script>
 
 <svelte:head>
