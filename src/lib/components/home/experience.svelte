@@ -4,14 +4,14 @@
   import Section from '$lib/components/layout/section.svelte'
   import LowAccentHighlight from '$lib/components/style/low-accent-highlight.svelte'
   import Tag from '../base/tag.svelte'
-  import { yearsOfExperience, entries } from '$lib/experience'
+  import { description, entries } from '$lib/experience'
 </script>
 
 <section id="experience">
   <Section
     align="right"
     title="Professional Experience"
-    description="Over the past {yearsOfExperience}+ years, my work has spanned security, casino gambling, social gaming, healthcare, and aviation - from early ideas to production systems."
+    {description}
     buttonText="View CV"
     buttonUrl="/cv"
     buttonColor="secondary"
