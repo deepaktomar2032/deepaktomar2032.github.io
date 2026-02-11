@@ -2,6 +2,7 @@
   import { tagline, greetingHeading } from '$lib/data/profile'
   import InterestsIcon from '$lib/svg/interests.svelte'
   import ExperienceIcon from '$lib/svg/experience.svelte'
+  import QuoteIcon from '$lib/svg/quote.svelte'
 </script>
 
 <section id="main">
@@ -13,6 +14,10 @@
     <a id="interests-btn" href="/interests" class="button primary">
       <InterestsIcon />
       Interests
+    </a>
+    <a id="quote-btn" href="/quotes" class="button primary">
+      <QuoteIcon />
+      Quotes
     </a>
     <a id="experience-btn" href="#experience" class="button secondary-light">
       <ExperienceIcon />
