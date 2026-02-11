@@ -18,6 +18,7 @@
       <ExperienceIcon />
       Experience
     </a>
+    <a id="photography-btn" href="/photography" class="button secondary"> Photography </a>
   </div>
 </section>
 
