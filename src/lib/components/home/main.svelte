@@ -1,5 +1,6 @@
 <script>
   import { tagline, greetingHeading } from '$lib/data/profile'
+  import InterestsIcon from '$lib/svg/interests.svelte'
   import ExperienceIcon from '$lib/svg/experience.svelte'
 </script>
 
@@ -9,6 +10,10 @@
     <span class="center">{tagline}</span>
   </p>
   <div class="ctas">
+    <a id="interests-btn" href="/interests" class="button primary">
+      <InterestsIcon />
+      Interests
+    </a>
     <a id="experience-btn" href="#experience" class="button secondary-light">
       <ExperienceIcon />
       Experience
@@ -54,6 +59,11 @@
       justify-content: center;
       gap: 10px;
       width: 100%;
+
+      .button {
+        width: auto;
+        min-width: 180px;
+      }
       @include for-iphone-se {
         grid-template-columns: 1fr;
       }
