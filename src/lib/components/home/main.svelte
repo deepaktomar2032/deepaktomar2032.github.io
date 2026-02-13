@@ -3,6 +3,7 @@
   import InterestsIcon from '$lib/svg/interests.svelte'
   import ExperienceIcon from '$lib/svg/experience.svelte'
   import QuoteIcon from '$lib/svg/quote.svelte'
+  import BlogIcon from '$lib/svg/blog.svelte'
 </script>
 
 <section id="main">
@@ -14,6 +15,10 @@
     <a id="interests-btn" href="/interests" class="button primary">
       <InterestsIcon />
       Interests
+    </a>
+    <a id="blog-btn" href="/blogs" class="button primary">
+      <BlogIcon />
+      Blog
     </a>
     <a id="quote-btn" href="/quotes" class="button primary">
       <QuoteIcon />

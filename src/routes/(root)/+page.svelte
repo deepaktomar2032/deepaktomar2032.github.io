@@ -5,9 +5,10 @@
   import RecentInterests from '$lib/components/home/recent-interests.svelte'
   import Experience from '$lib/components/home/experience.svelte'
   import RecentQuotes from '$lib/components/home/recent-quotes.svelte'
+  import RecentBlogs from '$lib/components/home/recent-blogs.svelte'
 
   export let data
-  let { quotes } = data
+  let { blogs, quotes } = data
 </script>
 
 <Mainlayout>
@@ -15,6 +16,7 @@
     <Main />
     <About />
     <RecentInterests />
+    <RecentBlogs {blogs} />
     <RecentQuotes {quotes} />
     <Experience />
   </div>
