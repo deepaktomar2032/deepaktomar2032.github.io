@@ -8,5 +8,12 @@ export const photos = [
     caption: 'Where geometry meets chaos & stillness holds its breath.',
     location: 'Gran Canaria, Spain',
     date: 'April 2023'
+  },
+  {
+    src: '/optimized-images/photography/2.avif',
+    alt: 'Golden dog on mossy stone stairs',
+    caption: 'Three floors above the forest & one golden soul bringing it all to life.',
+    location: 'Somewhere in Mountains, India',
+    date: 'February 2021'
   }
 ]
