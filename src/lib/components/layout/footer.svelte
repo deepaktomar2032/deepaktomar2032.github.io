@@ -25,11 +25,14 @@
 <style lang="scss">
   footer {
     width: 100%;
-    padding: 48px 0 32px;
-    background: linear-gradient(180deg, rgba(var(--primary-color-rgb), 0.14), rgba(var(--primary-color-rgb), 0.02))
-        no-repeat,
-      var(--body-background-color);
-    border-top: 1px solid rgba(var(--text-color-rgb), 0.06);
+    padding: 56px 0 40px;
+    background: linear-gradient(
+      180deg,
+      rgba(var(--primary-color-rgb), 0.08) 0%,
+      rgba(var(--primary-color-rgb), 0.02) 100%
+    );
+    border-top: 1px solid rgba(var(--primary-color-rgb), 0.15);
+    backdrop-filter: blur(10px);
 
     .content {
       max-width: 960px;

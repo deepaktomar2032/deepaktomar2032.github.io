@@ -1,48 +1,50 @@
 @mixin light-theme {
   // #region Palette
-  // Indigo / orange light theme
-  --primary-color: #6366f1;
-  --primary-color-rgb: 99, 102, 241;
+  // Soft blue / coral light theme - gentle on eyes
+  --primary-color: #5b7ce6;
+  --primary-color-rgb: 91, 124, 230;
   --primary-color-contrast: #ffffff;
 
-  --primary-light-color: #a5b4fc;
-  --primary-light-color-rgb: 165, 180, 252;
+  --primary-light-color: #a8c0f5;
+  --primary-light-color-rgb: 168, 192, 245;
 
-  --primary-lightest-color: #eef2ff;
-  --primary-lightest-color-rgb: 238, 242, 255;
+  --primary-lightest-color: #f0f4ff;
+  --primary-lightest-color-rgb: 240, 244, 255;
 
-  --secondary-color: #f97316;
-  --secondary-color-rgb: 249, 115, 22;
+  --secondary-color: #ff8a65;
+  --secondary-color-rgb: 255, 138, 101;
   --secondary-color-contrast: #ffffff;
 
-  --secondary-light-color: #fed7aa;
-  --secondary-light-color-rgb: 254, 215, 170;
+  --secondary-light-color: #ffccbc;
+  --secondary-light-color-rgb: 255, 204, 188;
 
-  --secondary-lightest-color: #fff7ed;
-  --secondary-lightest-color-rgb: 255, 247, 237;
+  --secondary-lightest-color: #fff5f2;
+  --secondary-lightest-color-rgb: 255, 245, 242;
   // #endregion
 
-  --page-background-color: #f5f3ff;
-  --page-background-color-rgb: 245, 243, 255;
-  --page-background-color-hsl-hue: 248;
+  --page-background-color: #f8fafc;
+  --page-background-color-rgb: 248, 250, 252;
+  --page-background-color-hsl-hue: 210;
   --page-background-color-hsl-saturation: 40%;
-  --page-background-color-hsl-lightness: 97%;
+  --page-background-color-hsl-lightness: 98%;
 
-  --text-color: #0f172a;
-  --text-color-rgb: 15, 23, 42;
-  --text-light-color: #6b7280;
+  --page-background-gradient: linear-gradient(180deg, #f8fafc 0%, #f0f4ff 50%, #f8fafc 100%);
+
+  --text-color: #1e293b;
+  --text-color-rgb: 30, 41, 59;
+  --text-light-color: #64748b;
 
   --blog-page-background-color: #ffffff;
 
   --link-highlight-color: var(--primary-color);
 
-  --button-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
-  --button-shadow-hover: 0px 4px 10px 8px rgb(0 0 0 / 10%);
+  --button-shadow: 0px 2px 8px 0px rgba(91, 124, 230, 0.15);
+  --button-shadow-hover: 0px 4px 16px 0px rgba(91, 124, 230, 0.25);
 
   --card-background-color: #ffffff;
   --card-background-color-rgb: 255, 255, 255;
-  --card-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
-  --card-shadow-hover: 0px 4px 10px 8px rgb(0 0 0 / 10%);
+  --card-shadow: 0px 2px 12px 0px rgba(15, 23, 42, 0.08);
+  --card-shadow-hover: 0px 6px 24px 0px rgba(15, 23, 42, 0.12);
 
   --button-primary-background-color: var(--primary-color);
   --button-primary-text-color: var(--primary-color-contrast);
@@ -56,7 +58,7 @@
   --button-secondary-light-background-color: var(--secondary-lightest-color);
   --button-secondary-light-text-color: var(--secondary-color);
 
-  --image-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06), 1px 3px 8px rgba(39, 44, 49, 0.03);
+  --image-shadow: 0px 8px 24px rgba(15, 23, 42, 0.08), 0px 2px 8px rgba(15, 23, 42, 0.04);
 
   --footer-background: linear-gradient(180deg, var(--primary-lightest-color) 0%, var(--primary-lightest-color) 100%);
 
@@ -65,100 +67,102 @@
   --code-background-color: #1c1e26;
   --code-text-color: #fff;
 
-  --scrollbar-thumb-color: #9e9e9e;
-  --scrollbar-track-color: #cdcdcd;
+  --scrollbar-thumb-color: #94a3b8;
+  --scrollbar-track-color: #e2e8f0;
 
   --callout-background-color: var(--page-background-color);
-  --callout-info-background-color: #dfeffd; //blue 100
-  --callout-info-accent-color: #2883f4; //blue 500
-  --callout-warning-background-color: #fff6b6;
-  --callout-warning-accent-color: #c87820;
-  --callout-error-background-color: #ffe8e8;
-  --callout-error-accent-color: #f95256;
-  --callout-success-background-color: #dcf7ec;
-  --callout-success-accent-color: #009f70;
+  --callout-info-background-color: #e0f2fe;
+  --callout-info-accent-color: #0284c7;
+  --callout-warning-background-color: #fef3c7;
+  --callout-warning-accent-color: #d97706;
+  --callout-error-background-color: #fee2e2;
+  --callout-error-accent-color: #dc2626;
+  --callout-success-background-color: #d1fae5;
+  --callout-success-accent-color: #059669;
 
   // Used for text highlights on blog
-  --highlight-marker-url: #{"url('https://s2.svgbox.net/pen-brushes.svg?ic=brush-9&color=B5E5E5')"};
+  --highlight-marker-url: #{"url('https://s2.svgbox.net/pen-brushes.svg?ic=brush-9&color=C8E1FF')"};
 
   // Used for highlights in Work Experience
-  --agora-color: #eadbff;
-  --freelancer-color: #bcebeb;
-  --logitix-color: #ffe2ce;
-  --sige-color: #cce4ff;
-  --promob-color: #d7e6eb;
+  --agora-color: #e9d5ff;
+  --freelancer-color: #bfdbfe;
+  --logitix-color: #fed7aa;
+  --sige-color: #dbeafe;
+  --promob-color: #e0e7ff;
 }
 
 @mixin dark-theme {
   // #region Palette
-  // Deep navy / soft indigo dark theme
-  --primary-color: #a5b4fc;
-  --primary-color-rgb: 165, 180, 252;
-  --primary-color-contrast: #020617;
+  // Warm dark theme - easy on eyes in low light
+  --primary-color: #90b8f8;
+  --primary-color-rgb: 144, 184, 248;
+  --primary-color-contrast: #0f172a;
 
-  --primary-light-color: #4f46e5;
-  --primary-light-color-rgb: 79, 70, 229;
+  --primary-light-color: #5b7ce6;
+  --primary-light-color-rgb: 91, 124, 230;
 
-  --primary-lightest-color: #111827;
-  --primary-lightest-color-rgb: 17, 24, 39;
+  --primary-lightest-color: #1e293b;
+  --primary-lightest-color-rgb: 30, 41, 59;
 
-  --secondary-color: #fb923c;
-  --secondary-color-rgb: 251, 146, 60;
-  --secondary-color-contrast: #020617;
+  --secondary-color: #ffa07a;
+  --secondary-color-rgb: 255, 160, 122;
+  --secondary-color-contrast: #0f172a;
 
-  --secondary-light-color: #fed7aa;
-  --secondary-light-color-rgb: 254, 215, 170;
+  --secondary-light-color: #ffccbc;
+  --secondary-light-color-rgb: 255, 204, 188;
 
-  --secondary-lightest-color: #1f2937;
-  --secondary-lightest-color-rgb: 31, 41, 55;
+  --secondary-lightest-color: #334155;
+  --secondary-lightest-color-rgb: 51, 65, 85;
   // #endregion
 
-  --page-background-color: #020617;
-  --page-background-color-rgb: 2, 6, 23;
+  --page-background-color: #0f172a;
+  --page-background-color-rgb: 15, 23, 42;
   --page-background-color-hsl-hue: 222;
   --page-background-color-hsl-saturation: 47%;
-  --page-background-color-hsl-lightness: 7%;
+  --page-background-color-hsl-lightness: 11%;
 
-  --text-color: #e5e7eb;
-  --text-color-rgb: 229, 231, 235;
-  --text-light-color: #9ca3af;
+  --page-background-gradient: linear-gradient(180deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
 
-  --blog-page-background-color: #020617;
+  --text-color: #f1f5f9;
+  --text-color-rgb: 241, 245, 249;
+  --text-light-color: #94a3b8;
 
-  --card-background-color: #050f2f;
-  --card-background-color-rgb: 5, 15, 47;
+  --blog-page-background-color: #0f172a;
+
+  --card-background-color: #1e293b;
+  --card-background-color-rgb: 30, 41, 59;
 
   --button-primary-background-color: var(--primary-color);
   --button-primary-text-color: var(--primary-color-contrast);
 
-  --button-primary-light-background-color: #020617;
+  --button-primary-light-background-color: var(--primary-lightest-color);
   --button-primary-light-text-color: var(--primary-color);
 
   --button-secondary-background-color: var(--secondary-color);
   --button-secondary-text-color: var(--secondary-color-contrast);
 
-  --button-secondary-light-background-color: #020617;
+  --button-secondary-light-background-color: var(--secondary-lightest-color);
   --button-secondary-light-text-color: var(--secondary-color);
 
-  --inline-code-background-color: #374151;
+  --inline-code-background-color: #334155;
 
-  --highlight-marker-url: #{"url('https://s2.svgbox.net/pen-brushes.svg?ic=brush-9&color=4f46e5')"};
+  --highlight-marker-url: #{"url('https://s2.svgbox.net/pen-brushes.svg?ic=brush-9&color=5b7ce6')"};
 
   --callout-background-color: var(--page-background-color);
-  --callout-info-background-color: #1d3874; //blue 900
-  --callout-info-accent-color: #6ca9f7; //blue 400
-  --callout-warning-background-color: #724413;
-  --callout-warning-accent-color: #ffca39;
-  --callout-error-background-color: #7c1d20;
-  --callout-error-accent-color: #ff8082;
-  --callout-success-background-color: #004737;
-  --callout-success-accent-color: #00c48f;
+  --callout-info-background-color: #1e3a5f;
+  --callout-info-accent-color: #7dd3fc;
+  --callout-warning-background-color: #713f12;
+  --callout-warning-accent-color: #fbbf24;
+  --callout-error-background-color: #7f1d1d;
+  --callout-error-accent-color: #fca5a5;
+  --callout-success-background-color: #064e3b;
+  --callout-success-accent-color: #6ee7b7;
 
-  --agora-color: #312e81;
-  --freelancer-color: #1d4ed8;
-  --logitix-color: #92400e;
-  --sige-color: #2563eb;
-  --promob-color: #374151;
+  --agora-color: #4c1d95;
+  --freelancer-color: #1e40af;
+  --logitix-color: #78350f;
+  --sige-color: #1e3a8a;
+  --promob-color: #475569;
 }
 
 :root {

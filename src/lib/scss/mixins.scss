@@ -2,8 +2,8 @@
 
 @mixin padded-container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 16px;
+  padding-left: 16px;
   margin-right: auto;
   margin-left: auto;
 
@@ -13,13 +13,13 @@
   }
 
   @include for-tablet-portrait-up {
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 24px;
+    padding-left: 24px;
   }
 
   @include for-tablet-landscape-up {
-    padding-right: 30px;
-    padding-left: 30px;
+    padding-right: 32px;
+    padding-left: 32px;
   }
 
   @include for-desktop-up {
