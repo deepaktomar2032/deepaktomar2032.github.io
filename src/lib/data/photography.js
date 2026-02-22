@@ -15,5 +15,12 @@ export const photos = [
     caption: 'Three floors above the forest & one golden soul bringing it all to life.',
     location: 'Somewhere in Mountains, India',
     date: 'February 2021'
+  },
+  {
+    src: '/optimized-images/photography/3.avif',
+    alt: 'Moody waterfront scene at dusk',
+    caption: 'A moody waterfront scene captured at dusk, where the city slows down and the sky takes over.',
+    location: 'Berlin, Germany',
+    date: 'July 2023'
   }
 ]
