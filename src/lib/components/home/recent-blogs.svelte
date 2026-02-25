@@ -7,7 +7,13 @@
 </script>
 
 <section id="recent-blogs">
-  <Section title="Latest blogs" description={blogsDescription} buttonText="View all blogs" buttonUrl="/blogs">
+  <Section
+    align="right"
+    title="Latest blogs"
+    description={blogsDescription}
+    buttonText="View all blogs"
+    buttonUrl="/blogs"
+  >
     <TwoByTwoGrid>
       {#each blogs as blog}
         <BlogPostCard {blog} showImage={false} />

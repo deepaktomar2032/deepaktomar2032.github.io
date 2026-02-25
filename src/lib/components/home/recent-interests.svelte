@@ -8,7 +8,7 @@
 </script>
 
 <section id="recent-interests">
-  <Section title="Interests" {description} buttonText="View Interests" buttonUrl="/interests">
+  <Section align="left" title="Interests" {description} buttonText="View Interests" buttonUrl="/interests">
     <TwoByTwoGrid>
       {#each recentInterests as interest}
         <InterestPostCard {interest} showImage={false} />

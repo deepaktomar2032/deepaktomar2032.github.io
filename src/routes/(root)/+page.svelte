@@ -15,9 +15,9 @@
   <div class="container">
     <Main />
     <About />
-    <RecentInterests />
     <RecentBlogs {blogs} />
-    <RecentQuotes {quotes} />
+    <RecentInterests />
     <Experience />
+    <RecentQuotes {quotes} />
   </div>
 </Mainlayout>
