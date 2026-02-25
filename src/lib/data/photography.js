@@ -22,5 +22,12 @@ export const photos = [
     caption: 'A moody waterfront scene captured at dusk, where the city slows down and the sky takes over.',
     location: 'Berlin, Germany',
     date: 'July 2023'
+  },
+  {
+    src: '/optimized-images/photography/4.avif',
+    alt: 'Palm trees standing dark against a golden horizon.',
+    caption: 'A sky that looks like a memory.',
+    location: 'Gran Canaria, Spain',
+    date: 'November 2023'
   }
 ]
