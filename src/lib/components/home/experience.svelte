@@ -14,7 +14,7 @@
     {description}
     buttonText="View CV"
     buttonUrl="/cv"
-    buttonColor="secondary"
+    buttonColor="primary"
   >
     <TwoByTwoGrid>
       {#each entries as entry}

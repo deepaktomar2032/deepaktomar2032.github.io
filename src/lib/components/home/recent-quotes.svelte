@@ -7,7 +7,7 @@
 </script>
 
 <section id="recent-quotes">
-  <Section title="Inspiring Quotes" {description} buttonText="View all Quotes" buttonUrl="/quotes">
+  <Section align="left" title="Inspiring Quotes" {description} buttonText="View all Quotes" buttonUrl="/quotes">
     <TwoByTwoGrid>
       {#each quotes as quote}
         <QuotePostCard {quote} showImage={false} />
