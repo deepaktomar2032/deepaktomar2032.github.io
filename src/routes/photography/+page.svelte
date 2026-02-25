@@ -148,16 +148,18 @@
   .photo-item__button {
     display: block;
     width: 100%;
+    height: 350px;
     padding: 0;
     margin: 0;
     border: none;
     background: transparent;
     cursor: zoom-in;
+    overflow: hidden;
   }
 
   .photo-item img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
     display: block;
     transition: transform 0.25s ease, filter 0.25s ease;
