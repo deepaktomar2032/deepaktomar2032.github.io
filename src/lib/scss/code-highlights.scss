@@ -47,7 +47,7 @@ code[class*='language-'] ::selection {
 }
 
 .token.punctuation {
-  color: rgb(199, 146, 234);
+  color: #7c4cc7;
 }
 
 .namespace {
@@ -61,7 +61,7 @@ code[class*='language-'] ::selection {
 
 .token.symbol,
 .token.property {
-  color: rgb(128, 203, 196);
+  color: #1f6f8b;
 }
 
 .token.tag,
@@ -75,7 +75,7 @@ code[class*='language-'] ::selection {
 }
 
 .token.number {
-  color: rgb(247, 140, 108);
+  color: #b45309;
 }
 
 .token.constant,
@@ -102,7 +102,7 @@ code[class*='language-'] ::selection {
 .token.entity,
 .language-css .token.string,
 .style .token.string {
-  color: rgb(173, 219, 103);
+  color: #2f7d32;
 }
 
 .token.class-name,
