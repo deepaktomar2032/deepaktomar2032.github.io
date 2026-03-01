@@ -1,50 +1,50 @@
 @mixin light-theme {
   // #region Palette
   // Soft blue / coral light theme - gentle on eyes
-  --primary-color: #5b7ce6;
-  --primary-color-rgb: 91, 124, 230;
+  --primary-color: #5f7de0;
+  --primary-color-rgb: 95, 125, 224;
   --primary-color-contrast: #ffffff;
 
-  --primary-light-color: #a8c0f5;
-  --primary-light-color-rgb: 168, 192, 245;
+  --primary-light-color: #b8cbf9;
+  --primary-light-color-rgb: 184, 203, 249;
 
-  --primary-lightest-color: #f0f4ff;
-  --primary-lightest-color-rgb: 240, 244, 255;
+  --primary-lightest-color: #eaf0ff;
+  --primary-lightest-color-rgb: 234, 240, 255;
 
-  --secondary-color: #ff8a65;
-  --secondary-color-rgb: 255, 138, 101;
+  --secondary-color: #df9478;
+  --secondary-color-rgb: 223, 148, 120;
   --secondary-color-contrast: #ffffff;
 
-  --secondary-light-color: #ffccbc;
-  --secondary-light-color-rgb: 255, 204, 188;
+  --secondary-light-color: #f8d7ca;
+  --secondary-light-color-rgb: 248, 215, 202;
 
-  --secondary-lightest-color: #fff5f2;
-  --secondary-lightest-color-rgb: 255, 245, 242;
+  --secondary-lightest-color: #fff5f1;
+  --secondary-lightest-color-rgb: 255, 245, 241;
   // #endregion
 
-  --page-background-color: #fafbfc;
-  --page-background-color-rgb: 250, 251, 252;
-  --page-background-color-hsl-hue: 210;
-  --page-background-color-hsl-saturation: 40%;
-  --page-background-color-hsl-lightness: 99%;
+  --page-background-color: #eef3fb;
+  --page-background-color-rgb: 238, 243, 251;
+  --page-background-color-hsl-hue: 218;
+  --page-background-color-hsl-saturation: 58%;
+  --page-background-color-hsl-lightness: 96%;
 
-  --page-background-gradient: linear-gradient(180deg, #ffffff 0%, #f0f4ff 30%, #fafbfc 100%);
+  --page-background-gradient: linear-gradient(180deg, #f6f9ff 0%, #edf3ff 42%, #e9f0fb 100%);
 
-  --text-color: #1e293b;
-  --text-color-rgb: 30, 41, 59;
-  --text-light-color: #64748b;
+  --text-color: #20304a;
+  --text-color-rgb: 32, 48, 74;
+  --text-light-color: #5f718d;
 
-  --blog-page-background-color: #ffffff;
+  --blog-page-background-color: #f4f7fd;
 
   --link-highlight-color: var(--primary-color);
 
-  --button-shadow: 0px 2px 8px 0px rgba(91, 124, 230, 0.15);
-  --button-shadow-hover: 0px 4px 16px 0px rgba(91, 124, 230, 0.25);
+  --button-shadow: 0px 2px 8px 0px rgba(53, 82, 153, 0.14);
+  --button-shadow-hover: 0px 6px 18px 0px rgba(53, 82, 153, 0.2);
 
-  --card-background-color: #ffffff;
-  --card-background-color-rgb: 255, 255, 255;
-  --card-shadow: 0px 2px 12px 0px rgba(15, 23, 42, 0.08);
-  --card-shadow-hover: 0px 6px 24px 0px rgba(15, 23, 42, 0.12);
+  --card-background-color: #f8fbff;
+  --card-background-color-rgb: 248, 251, 255;
+  --card-shadow: 0px 2px 12px 0px rgba(35, 55, 94, 0.08);
+  --card-shadow-hover: 0px 6px 24px 0px rgba(35, 55, 94, 0.12);
 
   --button-primary-background-color: var(--primary-color);
   --button-primary-text-color: var(--primary-color-contrast);
@@ -67,10 +67,10 @@
   --code-background-color: #1c1e26;
   --code-text-color: #fff;
 
-  --scrollbar-thumb-color: #94a3b8;
-  --scrollbar-track-color: #e2e8f0;
+  --scrollbar-thumb-color: #8ea3c4;
+  --scrollbar-track-color: #d8e1ef;
 
-  --callout-background-color: var(--page-background-color);
+  --callout-background-color: #f4f7fd;
   --callout-info-background-color: #e0f2fe;
   --callout-info-accent-color: #0284c7;
   --callout-warning-background-color: #fef3c7;
@@ -167,7 +167,4 @@
 
 :root {
   @include light-theme;
-  @media (prefers-color-scheme: dark) {
-    @include dark-theme;
-  }
 }

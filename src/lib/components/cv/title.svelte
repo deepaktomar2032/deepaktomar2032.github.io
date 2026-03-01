@@ -9,19 +9,21 @@
 
 <style lang="scss">
   h1 {
-    font-size: 56px;
+    font-size: 52px;
     margin: 0;
     font-weight: 700;
     color: var(--text-color);
+    line-height: 1.05;
     text-align: center;
     font-family: var(--title-font);
   }
 
   h5 {
     color: var(--text-light-color);
-    margin: 0;
-    font-size: 24px;
+    margin: 2px 0 0;
+    font-size: 22px;
     font-weight: 300;
+    line-height: 1.2;
     text-align: center;
     font-family: var(--title-font);
   }

@@ -64,7 +64,7 @@
     margin-right: auto;
 
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 6px;
     grid-template-columns: 1fr 1fr;
 
     grid-template-areas:
@@ -79,11 +79,11 @@
       margin: 0;
 
       .icon {
-        margin-right: 10px;
+        margin-right: 8px;
         color: var(--primary-color);
         :global(svg) {
-          width: 24px;
-          height: 24px;
+          width: 20px;
+          height: 20px;
         }
       }
 
@@ -128,7 +128,7 @@
       margin-left: 0;
       margin-right: 0;
 
-      grid-gap: 5px;
+      grid-gap: 4px;
       grid-template-columns: 1fr 1fr;
 
       grid-template-areas:

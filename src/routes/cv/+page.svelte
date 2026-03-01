@@ -28,11 +28,11 @@
 <style lang="scss">
   .cv-wrapper {
     position: relative;
-    min-height: 80vh;
+    min-height: 0;
 
     .download-link {
       position: absolute;
-      top: -5px;
+      top: -12px;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
@@ -42,10 +42,11 @@
       margin: 0 auto;
       width: fit-content;
       z-index: 1;
+      padding: 8px 18px;
 
       :global(svg) {
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
         color: inherit;
       }
     }
