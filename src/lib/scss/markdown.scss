@@ -67,11 +67,20 @@
 
   .cover-image {
     width: 100%;
-    max-height: 400px;
+    max-height: none;
     box-shadow: var(--image-shadow);
+    border-radius: 12px;
+    overflow: hidden;
+
+    picture {
+      height: auto !important;
+    }
 
     img {
-      object-fit: cover;
+      width: 100%;
+      height: auto !important;
+      object-fit: contain;
+      display: block;
     }
   }
 
