@@ -29,5 +29,12 @@ export const photos = [
     caption: 'A sky that looks like a memory.',
     location: 'Gran Canaria, Spain',
     date: 'November 2023'
+  },
+  {
+    src: '/optimized-images/photography/5.avif',
+    alt: 'Night skyline reflecting on calm waterfront',
+    caption: 'Where the city glows and the river listens.',
+    location: 'Berlin, Germany',
+    date: 'April 2023'
   }
 ]
