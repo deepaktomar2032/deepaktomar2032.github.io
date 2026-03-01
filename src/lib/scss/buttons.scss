@@ -2,7 +2,7 @@
   border-radius: 999px;
   -webkit-appearance: none;
   appearance: none;
-  border: none;
+  border: 1px solid transparent;
   background: transparent;
   font-weight: 600;
   box-shadow: var(--button-shadow);
@@ -19,7 +19,7 @@
     box-shadow: var(--button-shadow-hover);
     text-decoration: none;
     transform: translateY(-1px);
-    filter: brightness(1.1);
+    filter: brightness(1.04);
   }
 
   &.primary {
@@ -29,6 +29,7 @@
   &.primary-light {
     background: var(--button-primary-light-background-color);
     color: var(--button-primary-light-text-color);
+    border-color: rgba(var(--primary-color-rgb), 0.22);
   }
   &.secondary {
     background: var(--button-secondary-background-color);
@@ -37,6 +38,7 @@
   &.secondary-light {
     background: var(--button-secondary-light-background-color);
     color: var(--button-secondary-light-text-color);
+    border-color: rgba(var(--secondary-color-rgb), 0.28);
   }
   &.transparent {
     background: transparent;

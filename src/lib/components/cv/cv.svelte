@@ -42,7 +42,7 @@
 <style lang="scss">
   .cv {
     border-radius: 10px;
-    padding: 35px 0 10px 0;
+    padding: 22px 0 8px 0;
     color: var(--text-color);
     font-family: var(--default-font);
     font-size: 16px;
@@ -51,7 +51,7 @@
     overflow: hidden;
 
     display: grid;
-    gap: 20px 30px;
+    gap: 14px 22px;
     grid-template-columns: 1fr;
     grid-template-areas:
       'photo'
@@ -62,7 +62,7 @@
       'education';
 
     @media (min-width: 768px), print {
-      padding: 30px 20px;
+      padding: 22px 18px;
       grid-template-columns: 2fr 1fr;
 
       grid-template-areas:
@@ -74,13 +74,13 @@
     }
 
     @media (min-width: 900px), print {
-      margin: 20px auto;
+      margin: 10px auto;
       max-width: 210mm;
       box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.6), 1px 3px 8px rgba(39, 44, 49, 0.3);
     }
 
     section {
-      padding: 5px;
+      padding: 2px 4px;
       // margin: 10px;
       border-radius: 10px;
 
