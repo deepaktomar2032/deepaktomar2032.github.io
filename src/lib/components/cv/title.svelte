@@ -16,6 +16,10 @@
     line-height: 1.05;
     text-align: center;
     font-family: var(--title-font);
+
+    @media (max-width: 576px) {
+      font-size: 36px;
+    }
   }
 
   h5 {
@@ -26,6 +30,10 @@
     line-height: 1.2;
     text-align: center;
     font-family: var(--title-font);
+
+    @media (max-width: 576px) {
+      font-size: 18px;
+    }
   }
 
   @media (min-width: 768px), print {

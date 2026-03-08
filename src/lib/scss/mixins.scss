@@ -8,8 +8,8 @@
   margin-left: auto;
 
   @include for-iphone-se {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 8px;
+    padding-right: 8px;
   }
 
   @include for-tablet-portrait-up {

@@ -75,8 +75,11 @@
         width: auto;
         min-width: 180px;
       }
-      @include for-iphone-se {
-        grid-template-columns: 1fr;
+      @include for-phone-only {
+        .button {
+          min-width: unset;
+          width: 100%;
+        }
       }
     }
   }

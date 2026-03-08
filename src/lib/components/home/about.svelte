@@ -21,11 +21,11 @@
   #about {
     position: relative;
     display: grid;
-    grid-template-columns: 500px 250px;
+    grid-template-columns: 1fr 250px;
     align-items: center;
     justify-content: space-between;
 
-    @include for-phone-only {
+    @include for-tablet-portrait-down {
       grid-template-columns: 1fr;
       justify-items: center;
     }
@@ -35,13 +35,13 @@
       flex-direction: column;
       gap: 10px;
       h2 {
-        @include for-phone-only {
+        @include for-tablet-portrait-down {
           text-align: center;
         }
       }
 
       p {
-        @include for-phone-only {
+        @include for-tablet-portrait-down {
           text-align: justify;
         }
       }

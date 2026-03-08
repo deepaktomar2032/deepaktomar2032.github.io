@@ -132,14 +132,22 @@
 <style lang="scss">
   #photography-page {
     padding: 40px 0 60px;
+
+    @media (max-width: 576px) {
+      padding: 20px 0 40px;
+    }
   }
 
   .photo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: 1fr;
     gap: 18px;
     max-width: 1100px;
     margin-inline: auto;
+
+    @media (min-width: 577px) {
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
   }
 
   .photo-grid.single {
@@ -166,6 +174,10 @@
     background: transparent;
     cursor: zoom-in;
     overflow: hidden;
+
+    @media (max-width: 576px) {
+      height: 240px;
+    }
   }
 
   .photo-item img {
@@ -177,10 +189,12 @@
   }
 
   .photo-item figcaption {
-    padding: 8px 10px 10px;
+    padding: 8px 12px 10px;
     font-size: 0.85rem;
     color: var(--text-muted-color, var(--text-light-color));
     background: transparent;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .photo-date {
@@ -271,6 +285,8 @@
 
   .lightbox__image-wrapper {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     width: 100%;
     position: relative;
@@ -301,6 +317,13 @@
     align-items: center;
     gap: 8px;
     background: linear-gradient(180deg, rgba(4, 8, 16, 0) 0%, rgba(4, 8, 16, 0.72) 40%, rgba(4, 8, 16, 0.88) 100%);
+
+    @media (max-width: 576px) {
+      position: static;
+      border-radius: 0;
+      padding: 12px 16px;
+      background: rgba(4, 8, 16, 0.8);
+    }
   }
 
   .lightbox__caption {

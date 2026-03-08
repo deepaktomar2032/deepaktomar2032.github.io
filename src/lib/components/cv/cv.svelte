@@ -42,7 +42,7 @@
 <style lang="scss">
   .cv {
     border-radius: 10px;
-    padding: 22px 0 8px 0;
+    padding: 22px 12px 8px;
     color: var(--text-color);
     font-family: var(--default-font);
     font-size: 16px;

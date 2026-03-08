@@ -47,6 +47,10 @@
         flex-direction: column;
         align-items: center;
 
+        @media (max-width: 576px) {
+          width: 60px;
+        }
+
         .line {
           border-left: 2px dashed var(--primary-color);
           width: 2px;
@@ -119,6 +123,10 @@
           font-size: 22px;
           font-family: var(--title-font);
           font-weight: 600;
+
+          @media (max-width: 576px) {
+            font-size: 18px;
+          }
         }
 
         .icon {

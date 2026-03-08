@@ -65,13 +65,15 @@
 
     display: grid;
     grid-gap: 6px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
 
     grid-template-areas:
-      'location linkedin'
-      'experience github'
-      'languages email'
-      '. portfolio';
+      'location'
+      'experience'
+      'languages'
+      'email'
+      'linkedin'
+      'github';
 
     li {
       display: flex;
@@ -107,7 +109,7 @@
       }
       &.email {
         grid-area: email;
-        margin: 0 auto;
+        margin: 0;
       }
       &.linkedin {
         grid-area: linkedin;

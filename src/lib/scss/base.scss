@@ -110,7 +110,11 @@ h5 {
 
 ul,
 ol {
-  margin: 12px 0 12px 40px;
+  margin: 12px 0 12px 24px;
+
+  @include for-phone-only {
+    margin-left: 16px;
+  }
   line-height: 1.7;
 
   li {
