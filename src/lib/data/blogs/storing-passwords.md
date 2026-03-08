@@ -1,8 +1,8 @@
 ---
 slug: storing-passwords
-title: 'How Password Security Has Changed?'
+title: How Password Security Has Changed?
 date: 2026-02-15
-excerpt: 'A professional look at protecting user data, from basic hashing to modern industry standards.'
+excerpt: A professional look at protecting user data, from basic hashing to modern industry standards.
 tags: [Security, Architecture, Hashing, Authentication]
 ---
 
@@ -18,7 +18,7 @@ But how exactly should you store them? Not all methods are created equal. Let's 
 
 ---
 
-## 1. The F-Tier: Plain Text
+### 1. The F-Tier: Plain Text
 
 This is the absolute bottom of the barrel. Storing passwords in **plain text** means saving them exactly as the user typed them (e.g., "Password123") in a normal column in your database.
 
@@ -37,7 +37,7 @@ This is the absolute bottom of the barrel. Storing passwords in **plain text** m
 
 ---
 
-## 2. The D-Tier: Encryption
+### 2. The D-Tier: Encryption
 
 The next step up is **Encryption**. This sounds fancy, but it's still risky.
 
@@ -63,7 +63,7 @@ The next step up is **Encryption**. This sounds fancy, but it's still risky.
 
 ---
 
-## 3. The C-Tier: Hashing
+### 3. The C-Tier: Hashing
 
 Now we're getting somewhere. **Hashing** is a "one-way" process.
 
@@ -95,7 +95,7 @@ So hashing alone is not enough.
 
 ---
 
-## 4. The B-Tier: Salting
+### 4. The B-Tier: Salting
 
 To stop those "matching games," we add a little flavor: **Salt**.
 
@@ -131,7 +131,7 @@ So if users choose weak passwords, they can still be cracked. We need something 
 
 ---
 
-## 5. The A-Tier: Slow Hashing (bcrypt)
+### 5. The A-Tier: Slow Hashing (bcrypt)
 
 This is where real security begins. Instead of using general-purpose hash functions, we use special password hashing algorithms like **bcrypt**.
 
@@ -176,7 +176,7 @@ Security isn't about being unbreakable. It's about being hard enough that attack
 
 ---
 
-## 6. The S-Tier: No Passwords at All
+### 6. The S-Tier: No Passwords at All
 
 The ultimate way to secure a password? Avoid storing passwords entirely.
 

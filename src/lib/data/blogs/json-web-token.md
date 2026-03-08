@@ -28,7 +28,7 @@ Let’s understand what’s really happening - in simple terms.
 
 ---
 
-## First: What Does "Logged In" Actually Mean?
+### First: What Does "Logged In" Actually Mean?
 
 When you log into an app, you type your username and password.
 
@@ -51,7 +51,7 @@ Sometimes specifically: a **JWT (JSON Web Token)** - but don't worry about the f
 
 ---
 
-## So Why Does It Expire?
+### So Why Does It Expire?
 
 Because key cards expire.
 
@@ -74,7 +74,7 @@ Especially when money is involved.
 
 ---
 
-## What Happens Behind the Scenes?
+### What Happens Behind the Scenes?
 
 Let’s make it simple.
 
@@ -96,7 +96,7 @@ If you open the app after that time, the server says:
 
 ---
 
-## But Sometimes It Logs Me Out Even When I Use It Daily?
+### But Sometimes It Logs Me Out Even When I Use It Daily?
 
 Good question.
 
@@ -108,7 +108,7 @@ There are usually two tokens involved:
 Think of it like this:
 
 Access Token = Day pass  
-Refresh Token = Permission to get a new day pass  
+Refresh Token = Permission to get a new day pass
 
 If the access token expires, the app quietly uses the refresh token to get a new one.
 
@@ -116,12 +116,12 @@ You don’t even notice.
 
 But if:
 
-- The refresh token expires  
-- You haven’t opened the app for a long time  
-- The app was updated  
-- You changed your password  
-- The bank forced logout for security  
-- The system detected something suspicious  
+- The refresh token expires
+- You haven’t opened the app for a long time
+- The app was updated
+- You changed your password
+- The bank forced logout for security
+- The system detected something suspicious
 
 Then everything gets invalidated.
 
@@ -129,7 +129,7 @@ And you must log in again.
 
 ---
 
-## Why Banking Apps Log You Out More Often
+### Why Banking Apps Log You Out More Often
 
 Because they are paranoid.
 
@@ -154,7 +154,7 @@ If your social media app stays logged in for 6 months, okay. If your banking app
 
 ---
 
-## What Is a JWT (Very Simply)?
+### What Is a JWT (Very Simply)?
 
 A JWT is just a small piece of text that contains:
 
@@ -167,7 +167,7 @@ It's like a digitally signed permission slip. If someone edits it, the signature
 
 ---
 
-## Why Not Just Stay Logged In Forever?
+### Why Not Just Stay Logged In Forever?
 
 Because phones get:
 
@@ -183,7 +183,7 @@ Security is always a trade-off between convenience and safety. Banks choose safe
 
 ---
 
-## So Next Time You Get Logged Out…
+### So Next Time You Get Logged Out…
 
 Instead of thinking:
 
@@ -197,7 +197,7 @@ Still annoying - but now you know why.
 
 ---
 
-## Final Simple Summary
+### Final Simple Summary
 
 When you log in, you get a temporary digital pass (token). That pass expires - for security reasons, especially in financial apps. If it expires, you log in again. Not because the app is broken, but because it's doing its job.
 

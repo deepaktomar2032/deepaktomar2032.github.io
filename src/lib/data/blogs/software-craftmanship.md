@@ -1,8 +1,8 @@
 ---
 slug: software-craftmanship
-title: "Why Writing Good Software Is More Than Just Making It Work?"
+title: Why Writing Good Software Is More Than Just Making It Work?
 date: 2026-03-08
-excerpt: 'Software that "just works" is not always good software. Behind the scenes, many developers are fighting a quiet battle against messy code, rushed deadlines, and technical debt. This is the story behind the idea of software craftsmanship.'
+excerpt: Software that "just works" is not always good software. Behind the scenes, many developers are fighting a quiet battle against messy code, rushed deadlines, and technical debt. This is the story behind the idea of software craftsmanship.
 tags: [Clean Code, Software Craftmanship]
 ---
 
@@ -47,7 +47,7 @@ The goal was simple: **start doing a good job**. That's what software craftsmans
 - Measure twice cut once.
 - Practice.
 
-Some might question the value of code katas, code retreats, and deliberate practice sessions. But these exist precisely *because* we care about the customer. Musicians don't only play on stage, athletes don't only train during games. Professionals practice outside of performance - and software developers should be no different. Dedicating time to sharpen our skills means our employers and users get the best possible value out of us.
+Some might question the value of code katas, code retreats, and deliberate practice sessions. But these exist precisely _because_ we care about the customer. Musicians don't only play on stage, athletes don't only train during games. Professionals practice outside of performance - and software developers should be no different. Dedicating time to sharpen our skills means our employers and users get the best possible value out of us.
 
 Software craftsmanship isn't a club, a certification, or an ideology. It's a **personal commitment** - a promise every developer makes to themselves:
 

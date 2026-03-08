@@ -1,8 +1,8 @@
 ---
 slug: c4-model
-title: 'What Makes the C4 Model Different From Every Other Diagram?'
+title: What Makes the C4 Model Different From Every Other Diagram?
 date: 2026-02-25
-excerpt: 'Most architecture diagrams raise more questions than they answer. The C4 Model brings structure, zoom levels, and a shared vocabulary that actually sticks.'
+excerpt: Most architecture diagrams raise more questions than they answer. The C4 Model brings structure, zoom levels, and a shared vocabulary that actually sticks.
 tags: [Architecture, C4Model, Documentation, SoftwareDesign]
 ---
 
@@ -37,7 +37,7 @@ Let's break them down.
 
 ---
 
-## Level 1: System Context (The Big Picture)
+### Level 1: System Context (The Big Picture)
 
 This is the **zoomed-out view**. The 30,000-foot overview.
 
@@ -67,7 +67,7 @@ This diagram is for business stakeholders, product managers, and new developers 
 
 ---
 
-## Level 2: Containers (The Deployable Pieces)
+### Level 2: Containers (The Deployable Pieces)
 
 Now we zoom in.
 
@@ -101,7 +101,7 @@ Now developers start paying attention. This is where real conversations happen.
 
 ---
 
-## Level 3: Components (Inside a Container)
+### Level 3: Components (Inside a Container)
 
 Now we zoom **inside one container**.
 
@@ -126,7 +126,7 @@ This level is most useful for developers who need to understand structure withou
 
 ---
 
-## Level 4: Code (Class-Level Detail)
+### Level 4: Code (Class-Level Detail)
 
 This is the **detailed view**. Classes. Methods. Interfaces.
 
@@ -143,7 +143,7 @@ C4 includes this level for completeness. You won't need it often.
 
 ---
 
-## Why C4 Works
+### Why C4 Works
 
 C4 works because it **forces a decision before you draw anything**.
 
@@ -161,7 +161,7 @@ That single constraint eliminates most of the confusion that lives in architectu
 
 ---
 
-## Common Mistakes (Don't Do This)
+### Common Mistakes (Don't Do This)
 
 ### 1. Mixing Levels
 
@@ -199,7 +199,7 @@ Your diagram is not art. It is not a portfolio piece.
 
 ---
 
-## The Real Problem With Most Architecture Diagrams
+### The Real Problem With Most Architecture Diagrams
 
 They aren't really diagrams. They're the visual residue of a conversation that happened six months ago - captured in a hurry, never updated, and quietly misleading everyone who looks at them since.
 
