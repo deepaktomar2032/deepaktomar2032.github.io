@@ -25,7 +25,7 @@ export const photos = [
   },
   {
     src: '/optimized-images/photography/4.avif',
-    alt: 'Palm trees standing dark against a golden horizon.',
+    alt: 'Palm trees standing dark against a golden horizon',
     caption: 'A sky that looks like a memory.',
     location: 'Gran Canaria, Spain',
     date: 'November 2023'
@@ -36,5 +36,12 @@ export const photos = [
     caption: 'Where the city glows and the river listens.',
     location: 'Berlin, Germany',
     date: 'April 2023'
+  },
+  {
+    src: '/optimized-images/photography/6.avif',
+    alt: 'Funkturm radio tower glowing against dramatic sunset clouds',
+    caption: 'The last light of the day, resting between clouds and a tower that refuses to fade.',
+    location: 'Berlin, Germany',
+    date: 'December 2023'
   }
 ]
