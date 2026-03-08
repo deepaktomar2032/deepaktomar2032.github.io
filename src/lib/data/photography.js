@@ -43,5 +43,12 @@ export const photos = [
     caption: 'The last light of the day, resting between clouds and a tower that refuses to fade.',
     location: 'Berlin, Germany',
     date: 'December 2023'
+  },
+  {
+    src: '/optimized-images/photography/7.avif',
+    alt: 'Lamp-lit autumn path through a park at night with fallen leaves',
+    caption: 'A silent path under streetlights, where the night feels calm and endless.',
+    location: 'Berlin, Germany',
+    date: 'September 2023'
   }
 ]
