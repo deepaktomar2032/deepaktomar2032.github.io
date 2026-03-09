@@ -57,5 +57,12 @@ export const photos = [
     caption: 'Between earth and sky, a moment that refuses to rush.',
     location: 'Berlin, Germany',
     date: 'September 2023'
+  },
+  {
+    src: '/optimized-images/photography/9.avif',
+    alt: 'Waterfront building with string lights glowing at dusk, silhouetted trees reflected in calm river water',
+    caption: "Some evenings don't ask for attention - they just remind you to breathe.",
+    location: 'Berlin, Germany',
+    date: 'September 2023'
   }
 ]
