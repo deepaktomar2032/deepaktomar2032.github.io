@@ -50,5 +50,12 @@ export const photos = [
     caption: 'A silent path under streetlights, where the night feels calm and endless.',
     location: 'Berlin, Germany',
     date: 'September 2023'
+  },
+  {
+    src: '/optimized-images/photography/8.avif',
+    alt: 'Berlin Victory Column silhouetted against a gradient sunset sky with a contrail crossing behind it',
+    caption: 'Between earth and sky, a moment that refuses to rush.',
+    location: 'Berlin, Germany',
+    date: 'September 2023'
   }
 ]
