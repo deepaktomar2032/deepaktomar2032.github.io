@@ -31,10 +31,28 @@
     unlockScroll()
   }
 
+  const prevPhoto = () => {
+    if (activePhotoIndex > 0) {
+      activePhotoIndex--
+    }
+  }
+
+  const nextPhoto = () => {
+    if (activePhotoIndex < photos.length - 1) {
+      activePhotoIndex++
+    }
+  }
+
   const handleLightboxKeydown = (event) => {
     if (event.key === 'Escape') {
       event.preventDefault()
       closePhoto()
+    } else if (event.key === 'ArrowLeft') {
+      event.preventDefault()
+      prevPhoto()
+    } else if (event.key === 'ArrowRight') {
+      event.preventDefault()
+      nextPhoto()
     }
   }
 
@@ -95,6 +113,14 @@
         <div class="lightbox__inner">
           <button class="lightbox__close" type="button" on:click={closePhoto} aria-label="Close photo">×</button>
 
+          <button
+            class="lightbox__prev"
+            type="button"
+            on:click={prevPhoto}
+            aria-label="Previous photo"
+            style:visibility={activePhotoIndex === 0 ? 'hidden' : 'visible'}>‹</button
+          >
+
           <div class="lightbox__image-wrapper">
             <img
               src={photos[activePhotoIndex].src}
@@ -123,6 +149,14 @@
               </div>
             {/if}
           </div>
+
+          <button
+            class="lightbox__next"
+            type="button"
+            on:click={nextPhoto}
+            aria-label="Next photo"
+            style:visibility={activePhotoIndex === photos.length - 1 ? 'hidden' : 'visible'}>›</button
+          >
         </div>
       </div>
     {/if}
@@ -280,6 +314,54 @@
     transition: background 0.2s;
     &:hover {
       background: rgba(255, 255, 255, 0.28);
+    }
+  }
+
+  .lightbox__prev,
+  .lightbox__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    border: none;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
+    color: #fff;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    font-size: 1.6rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.28);
+    }
+
+    @media (max-width: 576px) {
+      width: 36px;
+      height: 36px;
+      font-size: 1.3rem;
+    }
+  }
+
+  .lightbox__prev {
+    left: 16px;
+
+    @media (max-width: 576px) {
+      left: 8px;
+    }
+  }
+
+  .lightbox__next {
+    right: 16px;
+
+    @media (max-width: 576px) {
+      right: 8px;
     }
   }
 
