@@ -64,5 +64,26 @@ export const photos = [
     caption: "Some evenings don't ask for attention - they just remind you to breathe.",
     location: 'Berlin, Germany',
     date: 'September 2023'
+  },
+  {
+    src: '/optimized-images/photography/10.avif',
+    alt: 'Bare trees in a park under a bright, clear blue winter sky',
+    caption: 'Stillness you can almost hear.',
+    location: 'Aachen, Germany',
+    date: 'January 2025'
+  },
+  {
+    src: '/optimized-images/photography/11.avif',
+    alt: 'Sunset over Berlin with modern office buildings in the background.',
+    caption: 'The sky reminded us who the real architect is!',
+    location: 'Berlin, Germany',
+    date: 'March 2025'
+  },
+  {
+    src: '/optimized-images/photography/12.avif',
+    alt: 'A large Christmas tree lit with golden lights in a dark city courtyard',
+    caption: 'One bright reason to look up in the dark.',
+    location: 'Berlin, Germany',
+    date: 'December 2023'
   }
 ]
