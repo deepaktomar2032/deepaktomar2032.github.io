@@ -85,5 +85,12 @@ export const photos = [
     caption: 'One bright reason to look up in the dark.',
     location: 'Berlin, Germany',
     date: 'December 2023'
+  },
+  {
+    src: '/optimized-images/photography/13.avif',
+    alt: 'Hundreds of glowing vertical rods and warm fairy lights hanging above among illuminated tree canopies',
+    caption: 'Even darkness has a way of holding things together. Dark Matter!',
+    location: 'Berlin, Germany',
+    date: 'December 2024'
   }
 ]
