@@ -1,0 +1,28 @@
+# Generated / build output
+build
+.svelte-kit
+
+# Dependencies
+node_modules
+
+# Git / VCS
+.git
+
+# Static assets and binaries
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.avif
+*.svg
+*.ico
+*.woff
+*.woff2
+*.ttf
+*.otf
+*.pdf
+*.xcf
+
+# Other
+package-lock.json

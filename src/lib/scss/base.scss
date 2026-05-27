@@ -1,0 +1,141 @@
+@use './breakpoints' as *;
+@use './mixins' as *;
+
+.container {
+  @include padded-container;
+}
+
+a {
+  color: var(--primary-color);
+  transition: color 0.2s ease, opacity 0.2s ease;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: rgba(var(--primary-color-rgb), 0.5);
+    text-underline-offset: 3px;
+    filter: brightness(1.08);
+  }
+}
+
+section {
+  position: relative;
+}
+
+// #region Titles
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+
+  @include for-phone-only {
+    font-size: 2rem;
+  }
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+h4 {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+h5 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.heading-link {
+  margin-left: 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--title-font);
+}
+// #endregion
+
+// #region Text
+.text-primary {
+  color: var(--primary-color);
+  fill: var(--primary-color);
+}
+.text-secondary {
+  color: var(--secondary-color);
+  fill: var(--secondary-color);
+}
+.text-lighter {
+  color: rgba(var(--text-color-rgb), 0.8);
+  fill: rgba(var(--text-color-rgb), 0.8);
+}
+.justify {
+  text-align: justify;
+}
+.text-info {
+  color: var(--callout-info-accent-color);
+  fill: var(--callout-info-accent-color);
+}
+::selection {
+  background-color: rgba(var(--primary-color-rgb), 0.25);
+  color: var(--text-color);
+  text-shadow: none;
+}
+#agora {
+  --bg-color: var(--agora-color);
+}
+#freelancer {
+  --bg-color: var(--freelancer-color);
+}
+#logitix {
+  --bg-color: var(--logitix-color);
+}
+#sige {
+  --bg-color: var(--sige-color);
+}
+#promob {
+  --bg-color: var(--promob-color);
+}
+
+ul,
+ol {
+  margin: 12px 0 12px 24px;
+
+  @include for-phone-only {
+    margin-left: 16px;
+  }
+  line-height: 1.7;
+
+  li {
+    margin: 8px 0;
+
+    &::marker {
+      color: var(--primary-color);
+    }
+  }
+}
+ul {
+  list-style: outside;
+}
+strong,
+b {
+  font-weight: 600;
+}
+em,
+i {
+  font-style: italic;
+}
+// #endregion

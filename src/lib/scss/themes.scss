@@ -1,0 +1,188 @@
+@mixin light-theme {
+  // Warm cream light theme
+  --primary-color: #5f7de0;
+  --primary-color-rgb: 95, 125, 224;
+  --primary-color-contrast: #ffffff;
+
+  --primary-light-color: #b8cbf9;
+  --primary-light-color-rgb: 184, 203, 249;
+
+  --primary-lightest-color: #eef2ff;
+  --primary-lightest-color-rgb: 238, 242, 255;
+
+  --secondary-color: #df9478;
+  --secondary-color-rgb: 223, 148, 120;
+  --secondary-color-contrast: #ffffff;
+
+  --secondary-light-color: #f8d7ca;
+  --secondary-light-color-rgb: 248, 215, 202;
+
+  --secondary-lightest-color: #fff6f2;
+  --secondary-lightest-color-rgb: 255, 246, 242;
+
+  // Warm neutral backgrounds
+  --page-background-color: #faf9f5;
+  --page-background-color-rgb: 250, 249, 245;
+
+  --page-background-gradient: linear-gradient(180deg, #fdfcf8 0%, #f9f6ef 48%, #f5f1e8 100%);
+
+  // Warm text
+  --text-color: #1e1b16;
+  --text-color-rgb: 30, 27, 22;
+  --text-light-color: #7a6b5d;
+
+  --blog-page-background-color: #faf9f5;
+
+  --link-highlight-color: var(--primary-color);
+
+  // Warm amber-tinted shadows
+  --button-shadow: 0px 2px 6px rgba(150, 90, 40, 0.16), 0px 1px 2px rgba(150, 90, 40, 0.08);
+  --button-shadow-hover: 0px 4px 18px rgba(150, 90, 40, 0.24), 0px 2px 4px rgba(150, 90, 40, 0.12);
+
+  // Warm card
+  --card-background-color: #fffefb;
+  --card-background-color-rgb: 255, 254, 251;
+  --card-background-gradient: linear-gradient(155deg, #fffefb 0%, rgba(255, 247, 235, 0.45) 100%);
+  --card-shadow: 0px 1px 3px rgba(120, 80, 30, 0.06), 0px 4px 16px rgba(120, 80, 30, 0.08);
+  --card-shadow-hover: 0px 2px 8px rgba(120, 80, 30, 0.09), 0px 12px 32px rgba(120, 80, 30, 0.13);
+
+  // Sticky glass header
+  --header-background: rgba(253, 252, 248, 0.85);
+  --header-border-color: rgba(150, 110, 70, 0.1);
+
+  --button-primary-background-color: var(--primary-color);
+  --button-primary-text-color: var(--primary-color-contrast);
+
+  --button-primary-light-background-color: var(--primary-lightest-color);
+  --button-primary-light-text-color: var(--primary-color);
+
+  --button-secondary-background-color: var(--secondary-color);
+  --button-secondary-text-color: var(--secondary-color-contrast);
+
+  --button-secondary-light-background-color: var(--secondary-lightest-color);
+  --button-secondary-light-text-color: var(--secondary-color);
+
+  --image-shadow: 0px 8px 24px rgba(80, 50, 20, 0.1), 0px 2px 8px rgba(80, 50, 20, 0.06);
+
+  --footer-background: linear-gradient(180deg, rgba(255, 235, 210, 0.3) 0%, rgba(255, 235, 210, 0.08) 100%);
+
+  --inline-code-background-color: #ede8df;
+
+  --code-background-color: #1c1e26;
+  --code-text-color: #fff;
+
+  --scrollbar-thumb-color: #c4a882;
+  --scrollbar-track-color: #ede8df;
+
+  --callout-background-color: #f8f4ee;
+  --callout-info-background-color: #e0f2fe;
+  --callout-info-accent-color: #0284c7;
+  --callout-warning-background-color: #fef3c7;
+  --callout-warning-accent-color: #d97706;
+  --callout-error-background-color: #fee2e2;
+  --callout-error-accent-color: #dc2626;
+  --callout-success-background-color: #d1fae5;
+  --callout-success-accent-color: #059669;
+
+  --highlight-marker-url: #{"url('https://s2.svgbox.net/pen-brushes.svg?ic=brush-9&color=C8E1FF')"};
+
+  // Work experience company highlights
+  --agora-color: #e9d5ff;
+  --freelancer-color: #bfdbfe;
+  --logitix-color: #fed7aa;
+  --sige-color: #dbeafe;
+  --promob-color: #e0e7ff;
+}
+
+@mixin dark-theme {
+  // Warm dark theme
+  --primary-color: #90b8f8;
+  --primary-color-rgb: 144, 184, 248;
+  --primary-color-contrast: #0f172a;
+
+  --primary-light-color: #5b7ce6;
+  --primary-light-color-rgb: 91, 124, 230;
+
+  --primary-lightest-color: #1e2a3a;
+  --primary-lightest-color-rgb: 30, 42, 58;
+
+  --secondary-color: #ffa07a;
+  --secondary-color-rgb: 255, 160, 122;
+  --secondary-color-contrast: #1a1008;
+
+  --secondary-light-color: #ffccbc;
+  --secondary-light-color-rgb: 255, 204, 188;
+
+  --secondary-lightest-color: #3d2010;
+  --secondary-lightest-color-rgb: 61, 32, 16;
+
+  // Warm dark background
+  --page-background-color: #141210;
+  --page-background-color-rgb: 20, 18, 16;
+
+  --page-background-gradient: linear-gradient(180deg, #161412 0%, #1c1916 50%, #141210 100%);
+
+  --text-color: #f2ede6;
+  --text-color-rgb: 242, 237, 230;
+  --text-light-color: #9c8f80;
+
+  --blog-page-background-color: #141210;
+
+  --button-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4), 0px 1px 2px rgba(0, 0, 0, 0.2);
+  --button-shadow-hover: 0px 4px 18px rgba(0, 0, 0, 0.5), 0px 2px 4px rgba(0, 0, 0, 0.25);
+
+  --card-background-color: #1e1b17;
+  --card-background-color-rgb: 30, 27, 23;
+  --card-background-gradient: linear-gradient(155deg, #201d19 0%, rgba(28, 22, 16, 0.7) 100%);
+  --card-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3), 0px 4px 18px rgba(0, 0, 0, 0.35);
+  --card-shadow-hover: 0px 2px 8px rgba(0, 0, 0, 0.35), 0px 12px 36px rgba(0, 0, 0, 0.45);
+
+  --header-background: rgba(20, 18, 16, 0.88);
+  --header-border-color: rgba(200, 160, 100, 0.1);
+
+  --button-primary-background-color: var(--primary-color);
+  --button-primary-text-color: var(--primary-color-contrast);
+
+  --button-primary-light-background-color: var(--primary-lightest-color);
+  --button-primary-light-text-color: var(--primary-color);
+
+  --button-secondary-background-color: var(--secondary-color);
+  --button-secondary-text-color: var(--secondary-color-contrast);
+
+  --button-secondary-light-background-color: var(--secondary-lightest-color);
+  --button-secondary-light-text-color: var(--secondary-color);
+
+  --image-shadow: 0px 8px 24px rgba(0, 0, 0, 0.4), 0px 2px 8px rgba(0, 0, 0, 0.25);
+
+  --footer-background: linear-gradient(180deg, rgba(60, 40, 20, 0.25) 0%, rgba(60, 40, 20, 0.06) 100%);
+
+  --inline-code-background-color: #2a2520;
+
+  --code-background-color: #0e0c0a;
+  --code-text-color: #f2ede6;
+
+  --scrollbar-thumb-color: #5a4e42;
+  --scrollbar-track-color: #1e1b17;
+
+  --callout-background-color: #1a1712;
+  --callout-info-background-color: #1e3a5f;
+  --callout-info-accent-color: #7dd3fc;
+  --callout-warning-background-color: #713f12;
+  --callout-warning-accent-color: #fbbf24;
+  --callout-error-background-color: #7f1d1d;
+  --callout-error-accent-color: #fca5a5;
+  --callout-success-background-color: #064e3b;
+  --callout-success-accent-color: #6ee7b7;
+
+  --highlight-marker-url: #{"url('https://s2.svgbox.net/pen-brushes.svg?ic=brush-9&color=5b7ce6')"};
+
+  --agora-color: #4c1d95;
+  --freelancer-color: #1e40af;
+  --logitix-color: #78350f;
+  --sige-color: #1e3a8a;
+  --promob-color: #475569;
+}
+
+:root {
+  @include light-theme;
+}
