@@ -5,6 +5,8 @@ on:
     branches:
       - master
   workflow_dispatch:
+  repository_dispatch:
+    types: [content-updated]
 
 permissions:
   contents: read
@@ -20,6 +22,9 @@ jobs:
         with:
           token: ${{ secrets.CONTENT_REPO_PAT }}
           submodules: recursive
+
+      - name: Update content submodule to latest
+        run: git submodule update --remote content
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
