@@ -1,11 +1,17 @@
 <script>
-  import { onDestroy } from 'svelte'
+  import { onDestroy, onMount } from 'svelte'
   import Mainlayout from '$lib/layout/main.svelte'
   import Section from '$lib/components/layout/section.svelte'
   import PinIcon from '$lib/svg/pin.svelte'
   import { description, photos } from '$lib/data/photography'
 
   let activePhotoIndex = null
+  let lightboxStartTime = 0
+  let lightboxVideoEl
+
+  let gridVideoEls = []
+  let intersectingIndices = new Set()
+  let observer
 
   const lockScroll = () => {
     if (typeof document !== 'undefined') {
@@ -22,24 +28,41 @@
   }
 
   const openPhoto = (index) => {
+    const photo = photos[index]
+    const gridVideoEl = gridVideoEls[index]
+    if (photo.type === 'video' && gridVideoEl) {
+      lightboxStartTime = gridVideoEl.currentTime || 0
+      gridVideoEl.pause()
+    } else {
+      lightboxStartTime = 0
+    }
     activePhotoIndex = index
     lockScroll()
   }
 
   const closePhoto = () => {
+    const closedIndex = activePhotoIndex
     activePhotoIndex = null
     unlockScroll()
+
+    const gridVideoEl = gridVideoEls[closedIndex]
+    if (gridVideoEl && intersectingIndices.has(closedIndex)) {
+      gridVideoEl.currentTime = 0
+      gridVideoEl.play().catch(() => {})
+    }
   }
 
   const prevPhoto = () => {
     if (activePhotoIndex > 0) {
       activePhotoIndex--
+      lightboxStartTime = 0
     }
   }
 
   const nextPhoto = () => {
     if (activePhotoIndex < photos.length - 1) {
       activePhotoIndex++
+      lightboxStartTime = 0
     }
   }
 
@@ -56,7 +79,36 @@
     }
   }
 
+  const handleLightboxVideoReady = () => {
+    if (!lightboxVideoEl) return
+    lightboxVideoEl.currentTime = lightboxStartTime
+    lightboxVideoEl.play().catch(() => {})
+  }
+
+  onMount(() => {
+    if (typeof IntersectionObserver === 'undefined') return
+
+    observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const index = Number(entry.target.dataset.index)
+          if (entry.isIntersecting) {
+            intersectingIndices.add(index)
+            entry.target.play().catch(() => {})
+          } else {
+            intersectingIndices.delete(index)
+            entry.target.pause()
+          }
+        })
+      },
+      { threshold: 0.35 }
+    )
+
+    gridVideoEls.forEach((el) => el && observer.observe(el))
+  })
+
   onDestroy(() => {
+    observer?.disconnect()
     unlockScroll()
   })
 </script>
@@ -72,9 +124,24 @@
                 type="button"
                 class="photo-item__button"
                 on:click={() => openPhoto(index)}
-                aria-label={photo.alt ?? photo.caption ?? 'Open photo'}
+                aria-label={photo.alt ?? photo.caption ?? (photo.type === 'video' ? 'Open video' : 'Open photo')}
               >
-                <img src={photo.src} alt={photo.alt ?? 'Photo'} loading="lazy" decoding="async" />
+                {#if photo.type === 'video'}
+                  <video
+                    bind:this={gridVideoEls[index]}
+                    data-index={index}
+                    class="photo-item__video"
+                    src={photo.previewSrc}
+                    poster={photo.src}
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                  />
+                  <span class="photo-item__play-badge" aria-hidden="true">▶</span>
+                {:else}
+                  <img src={photo.src} alt={photo.alt ?? 'Photo'} loading="lazy" decoding="async" />
+                {/if}
               </button>
 
               {#if photo.caption}
@@ -122,12 +189,29 @@
           >
 
           <div class="lightbox__image-wrapper">
-            <img
-              src={photos[activePhotoIndex].src}
-              alt={photos[activePhotoIndex].alt ?? 'Photo'}
-              loading="lazy"
-              decoding="async"
-            />
+            {#if photos[activePhotoIndex].type === 'video'}
+              {#key activePhotoIndex}
+                <video
+                  bind:this={lightboxVideoEl}
+                  class="lightbox__video"
+                  poster={photos[activePhotoIndex].src}
+                  controls
+                  playsinline
+                  on:loadedmetadata={handleLightboxVideoReady}
+                >
+                  {#each photos[activePhotoIndex].sources as source}
+                    <source src={source.src} type={source.type} />
+                  {/each}
+                </video>
+              {/key}
+            {:else}
+              <img
+                src={photos[activePhotoIndex].src}
+                alt={photos[activePhotoIndex].alt ?? 'Photo'}
+                loading="lazy"
+                decoding="async"
+              />
+            {/if}
             {#if photos[activePhotoIndex].caption || photos[activePhotoIndex].date || photos[activePhotoIndex].location}
               <div class="lightbox__meta">
                 {#if photos[activePhotoIndex].caption}
@@ -234,7 +318,8 @@
     }
   }
 
-  .photo-item img {
+  .photo-item img,
+  .photo-item__video {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -242,6 +327,25 @@
     transition: transform 0.25s ease, filter 0.25s ease;
     position: relative;
     z-index: 2;
+  }
+
+  .photo-item__play-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 3;
+    width: 26px;
+    height: 26px;
+    border-radius: 999px;
+    background: rgba(8, 10, 20, 0.55);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    line-height: 1;
+    padding-left: 2px;
+    pointer-events: none;
   }
 
   .photo-item figcaption {
@@ -411,6 +515,17 @@
     -webkit-user-select: none;
     -webkit-user-drag: none;
     pointer-events: none;
+  }
+
+  .lightbox__video {
+    max-width: 100%;
+    max-height: calc(100vh - 80px);
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 16px 60px rgba(0, 0, 0, 0.65);
+    background: #000;
+    display: block;
   }
 
   .lightbox__meta {
